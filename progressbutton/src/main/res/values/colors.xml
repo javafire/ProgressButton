@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="bt_nomal">#00C5CD</color>
+    <color name="bt_press">#00868B</color>
+    <color name="bt_pro">#00FF00</color>
+    <color name="bt_compelte">#FF00FF</color>
+    <color name="text_white">#ffffff</color>
+    <color name="text_al">#00ffffff</color>
+</resources>

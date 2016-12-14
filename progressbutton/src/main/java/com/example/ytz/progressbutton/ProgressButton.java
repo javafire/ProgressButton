@@ -67,7 +67,6 @@ public class ProgressButton extends Button {
 
          //设置button本身的文字为透明以免干扰我们自己绘制上去的文字
         setTextColor(getResources().getColor(R.color.text_al));
-        System.out.println(textColor);
         mPaint = new Paint();
         mPaint.setTextSize(getTextSize());
         mPaint.setColor(textColor);
@@ -86,7 +85,7 @@ public class ProgressButton extends Button {
     //1、测量:一个view的宽高尺寸，只有在测量之后才能得到，也就是measure方法被调用之后
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        System.out.println("ProgressButton.onMeasure");
+     
         //获取spec模式
         int widthMode = MeasureSpec.getMode(widthMeasureSpec);
         int heightMode = MeasureSpec.getMode(heightMeasureSpec);
@@ -120,14 +119,14 @@ public class ProgressButton extends Button {
     @Override
     protected void onLayout(boolean changed, int left, int top, int right, int bottom) {
         super.onLayout(changed, left, top, right, bottom);
-        System.out.println("ProgressButton.onLayout");
+       
 
     }
     //3、画：该方法后才可见
     @Override
     protected void onDraw(Canvas canvas) {
         super.onDraw(canvas);
-        System.out.println("ProgressButton.onDraw");
+      
         String tip = "";
         switch (stateNow) {
             case STATE_NOMAL:
@@ -155,7 +154,6 @@ public class ProgressButton extends Button {
         }
         //绘制提示文本
         Rect rect = new Rect();
-        System.out.println("tip--->"+tip);
         mPaint.getTextBounds(tip,0,tip.length(),rect);
         canvas.drawText(tip,(getMeasuredWidth()-rect.width())/2,
                 (getMeasuredHeight()+rect.height())/2,mPaint);
